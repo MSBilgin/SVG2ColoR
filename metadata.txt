@@ -1,0 +1,38 @@
+# This file contains metadata for your plugin. Beginning
+# with version 1.8 this is the preferred way to supply information about a
+# plugin. The current method of embedding metadata in __init__.py will
+# be supported until version 2.0
+
+# This file should be included when you package your plugin.
+
+# Mandatory items:
+
+
+[general]
+name=SVG2ColoR
+qgisMinimumVersion=2.0
+description= Generates color-ramp styles from SVG files. It also compatible with CPT-CITY styles. SVG2ColoR improves your color-ramp library, by the way your maps look better.
+version=0.7
+author=Mehmet Selim BILGIN
+email=mselimbilgin@yahoo.com
+
+# end of mandatory metadata
+
+# Optional items:
+
+# Uncomment the following line and add your changelog entries:
+# changelog=
+
+# tags are comma separated with spaces allowed
+tags=style, SVG, color ramps
+
+homepage=http://cbsuygulama.wordpress.com/svg2color
+tracker=https://github.com/MSBilgin/SVG2ColoR/issues
+repository=https://github.com/MSBilgin/SVG2ColoR
+icon=icon.png
+# experimental flag
+experimental=False
+
+# deprecated flag (applies to the whole plugin, not just a single version
+deprecated=False
+
