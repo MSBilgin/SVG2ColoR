@@ -15,16 +15,21 @@ SVG2ColoR is a QGIS 2 plugin for transforming SVG Linear Gradient styles to QGIS
 
 ###Features
 
-    - It uses <linearGradient/> and <stop/> tags.
-      
-    - RGB values can be defined in numeric and hex type.
-      
-    - Supports 3-digit shorthand hex values for RBG.
+   - It uses <linearGradient/> and  <stop/> tags.
+
+   - RGB values can be defined in numeric and hex type.
+   
+   - Supports 3-digit shorthand hex values for RBG.
+
+
     
     
     
     <p align="center">
   <img src="https://lh4.googleusercontent.com/rAOTmjjQiZiBK9y5YWRCvGzyC_ukI7kSUVxkp8C8ocw=w574-h397-no"/>
+</p>
+    <p align="center">
+  <img src="https://lh6.googleusercontent.com/-gC-FqVXPdTo/U6yR8X5M9KI/AAAAAAAAAiY/KCAyGYrn_BI/w574-h397-no/2.png"/>
 </p>
 
 
