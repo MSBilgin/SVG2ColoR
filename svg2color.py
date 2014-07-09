@@ -7,10 +7,10 @@
  SVG2ColoR improves your color-ramp library, by the way your maps look better.
                               -------------------
         begin                : 2014-06-17
-		version				 : 0.7
+		version				 : 0.8
         copyright            : (C) 2014 by Mehmet Selim BILGIN
         email                : mselimbilgin@yahoo.com
-		web					 : http://cbsuygulama.wordpress.com
+		web					 : http://cbsuygulama.wordpress.com/svg2color
  ***************************************************************************/
 
 /***************************************************************************
@@ -29,10 +29,10 @@ from qgis.core import *
 import resources_rc
 from svg2colordialog import SVG2ColoRDialog
 from PyQt4.QtWebKit import QGraphicsWebView
-import os
 from xml.dom import minidom
 import codecs
-
+import os
+import urllib2
 
 class SVG2ColoR:
 
@@ -66,7 +66,7 @@ class SVG2ColoR:
 		self.iface.removePluginMenu(u"&SVG2ColoR", self.action)
 		self.iface.removeToolBarIcon(self.action)
 
-	def browseFile(self):
+	def loadFromFile(self):
 		##File browsing.
 		browseDlg = QFileDialog.getOpenFileName(self.dlg, 'Choose SVG File...', self.dlg.lineEdit.text(), 'SVG file (*.svg)')
 		if browseDlg:
@@ -76,7 +76,39 @@ class SVG2ColoR:
 					self.isLinearGrad(readFile.read())
 			except Exception as readError:
 				QMessageBox.critical(None, "Information", ("An error has occured: " + str(readError)))
-
+				
+	def loadFromURL(self):
+		##URl reading.
+		try:
+			urlSVG = urllib2.urlopen(self.dlg.lineEdit.text()).read()
+			self.isLinearGrad(urlSVG)
+		except Exception as urlError:
+			QMessageBox.critical(None, "Information", 'Cannot load from the given URL: ' + str(urlError))
+			self.graphicRenderer(open(os.path.dirname(os.path.realpath(__file__)) + os.sep + 'error.svg', 'r').read())
+			
+	def optionHandler(self):
+		##RadioButton detection.
+		if self.dlg.radioButton.isChecked():
+			self.dlg.pushButton.setText('Browse...')
+			try:
+				self.dlg.pushButton.clicked.disconnect()
+			except:
+				pass
+			self.dlg.pushButton.clicked.connect(self.loadFromFile)			
+			self.dlg.lineEdit.clear()
+			self.dlg.lineEdit.setReadOnly(True)
+			self.graphicRenderer(open(os.path.dirname(os.path.realpath(__file__)) + os.sep + 'opening.svg', 'r').read())
+		else:
+			self.dlg.pushButton.setText('Get URL...')
+			try:
+				self.dlg.pushButton.clicked.disconnect()				
+			except:
+				pass
+			self.dlg.pushButton.clicked.connect(self.loadFromURL)						
+			self.dlg.lineEdit.clear()
+			self.dlg.lineEdit.setReadOnly(False)
+			self.dlg.lineEdit.setFocus()
+			self.graphicRenderer(open(os.path.dirname(os.path.realpath(__file__)) + os.sep + 'opening.svg', 'r').read())
 
 	def isLinearGrad(self, svgDocument):
 		##Checking SVG document for XML syntax.
@@ -92,7 +124,7 @@ class SVG2ColoR:
 				try:
 					self.colorList = list()
 					for i in self.firstNode[0].getElementsByTagName('stop'):
-						#Some SVG files contain hex values for defining colors. It must be converted to values. This issue is handling in here.
+						#Some SVG files contain hex values for defining colors. It must be converted to values. This issue is handled in here.
 						if i.attributes['stop-color'].value[0] == '#':
 							self.colorList.append([self.hexToRgb(i.attributes['stop-color'].value), float(i.attributes['offset'].value[:-1])/100])
 						else:
@@ -100,7 +132,7 @@ class SVG2ColoR:
 					self.sampleSvg(self.firstNode[0])
 					self.dlg.pushButton_2.setEnabled(True)
 				except Exception as linearGradError:
-					QMessageBox.critical(None, "Information", 'Can not read color values. Please choose a proper SVG document. You can find lots of samples in <a href="http://soliton.vm.bytemark.co.uk/pub/cpt-city/">CPT-CITY webpage</a>')
+					QMessageBox.critical(None, "Information", 'Cannot read the color values. Please choose a proper SVG document. You can find lots of samples in <a href="http://soliton.vm.bytemark.co.uk/pub/cpt-city/">CPT-CITY webpage</a>')
 					self.graphicRenderer(open(os.path.dirname(os.path.realpath(__file__)) + os.sep + 'error.svg', 'r').read())
 					self.dlg.pushButton_2.setEnabled(False)
 					
@@ -199,7 +231,7 @@ class SVG2ColoR:
 		scene.addItem(webview)
 		
 		
-	def saveStyle(self):
+	def exportStyle(self):
 		browseDlg = QFileDialog.getSaveFileName(self.dlg, 'Save Style File...', os.path.dirname(self.dlg.lineEdit.text()) + os.sep + os.path.splitext(os.path.basename(self.dlg.lineEdit.text()))[0], 'XML file (*.xml)')
 		if browseDlg:
 			try:
@@ -213,8 +245,10 @@ class SVG2ColoR:
 
 	def run(self):
 		self.dlg = SVG2ColoRDialog()
-		self.dlg.pushButton.clicked.connect(self.browseFile)
-		self.dlg.pushButton_2.clicked.connect(self.saveStyle)
+		self.optionHandler()
+		self.dlg.radioButton.toggled.connect(self.optionHandler)
+		self.dlg.radioButton_2.toggled.connect(self.optionHandler)
+		self.dlg.pushButton_2.clicked.connect(self.exportStyle)
 		self.graphicRenderer(open(os.path.dirname(os.path.realpath(__file__)) + os.sep + 'opening.svg', 'r').read())
 		self.dlg.exec_()
 

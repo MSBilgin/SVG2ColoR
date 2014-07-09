@@ -7,10 +7,10 @@
  SVG2ColoR improves your color-ramp library, by the way your maps look better.
                               -------------------
         begin                : 2014-06-17
-		version				 : 0.7
+		version				 : 0.8
         copyright            : (C) 2014 by Mehmet Selim BILGIN
         email                : mselimbilgin@yahoo.com
-		web					 : http://cbsuygulama.wordpress.com
+		web					 : http://cbsuygulama.wordpress.com/svg2color
  ***************************************************************************/
 
 /***************************************************************************

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_svg2color.ui'
 #
-# Created: Fri Jun 27 01:30:13 2014
+# Created: Wed Jul 09 00:20:52 2014
 #      by: PyQt4 UI code generator 4.10.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -27,12 +27,9 @@ class Ui_SVG2ColoR(object):
     def setupUi(self, SVG2ColoR):
         SVG2ColoR.setObjectName(_fromUtf8("SVG2ColoR"))
         SVG2ColoR.resize(558, 359)
-        self.label = QtGui.QLabel(SVG2ColoR)
-        self.label.setGeometry(QtCore.QRect(30, 40, 101, 16))
-        self.label.setObjectName(_fromUtf8("label"))
         self.lineEdit = QtGui.QLineEdit(SVG2ColoR)
         self.lineEdit.setGeometry(QtCore.QRect(30, 70, 401, 20))
-        self.lineEdit.setReadOnly(True)
+        self.lineEdit.setReadOnly(False)
         self.lineEdit.setObjectName(_fromUtf8("lineEdit"))
         self.pushButton = QtGui.QPushButton(SVG2ColoR)
         self.pushButton.setGeometry(QtCore.QRect(460, 70, 75, 23))
@@ -52,14 +49,22 @@ class Ui_SVG2ColoR(object):
         self.graphicsView.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.graphicsView.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.graphicsView.setObjectName(_fromUtf8("graphicsView"))
+        self.radioButton = QtGui.QRadioButton(SVG2ColoR)
+        self.radioButton.setGeometry(QtCore.QRect(30, 30, 82, 17))
+        self.radioButton.setChecked(True)
+        self.radioButton.setObjectName(_fromUtf8("radioButton"))
+        self.radioButton_2 = QtGui.QRadioButton(SVG2ColoR)
+        self.radioButton_2.setGeometry(QtCore.QRect(130, 30, 82, 17))
+        self.radioButton_2.setObjectName(_fromUtf8("radioButton_2"))
 
         self.retranslateUi(SVG2ColoR)
         QtCore.QMetaObject.connectSlotsByName(SVG2ColoR)
 
     def retranslateUi(self, SVG2ColoR):
         SVG2ColoR.setWindowTitle(_translate("SVG2ColoR", "SVG2ColoR", None))
-        self.label.setText(_translate("SVG2ColoR", "Input SVG Doument", None))
-        self.pushButton.setText(_translate("SVG2ColoR", "Load SVG", None))
-        self.pushButton_2.setText(_translate("SVG2ColoR", "Save as Style...", None))
+        self.pushButton.setText(_translate("SVG2ColoR", "Browse...", None))
+        self.pushButton_2.setText(_translate("SVG2ColoR", "Export as Style", None))
         self.label_2.setText(_translate("SVG2ColoR", "<a href=\"http://cbsuygulama.wordpress.com/2014/06/26/svg2color-qgis-color-ramp-plugin/\">Help...</a>", None))
+        self.radioButton.setText(_translate("SVG2ColoR", "Local File", None))
+        self.radioButton_2.setText(_translate("SVG2ColoR", "URL", None))
 
