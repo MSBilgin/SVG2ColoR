@@ -6,8 +6,8 @@
  Generates color-ramp styles from SVG files.  It also compatible with CPT-CITY styles.
  SVG2ColoR improves your color-ramp library, by the way your maps look better.
                               -------------------
-        begin                : 2014-10-17
-		version				 : 0.9
+        begin                : 2014-06-17
+		version				 : 0.8
         copyright            : (C) 2014 by Mehmet Selim BILGIN
         email                : mselimbilgin@yahoo.com
 		web					 : http://cbsuygulama.wordpress.com/svg2color
@@ -23,14 +23,12 @@
  ***************************************************************************/
 """
 
-from PyQt4 import QtCore, QtGui, uic
-import os
-
-MainFormClass, _ = uic.loadUiType(os.path.join(
-    os.path.dirname(__file__), 'ui_svg2color.ui'))
+from PyQt4 import QtCore, QtGui
+from ui_svg2color import Ui_SVG2ColoR
+# create the dialog for zoom to point
 
 
-class SVG2ColoRDialog(QtGui.QDialog, MainFormClass):
+class SVG2ColoRDialog(QtGui.QDialog, Ui_SVG2ColoR):
     def __init__(self):
         QtGui.QDialog.__init__(self)
         # Set up the user interface from Designer.
