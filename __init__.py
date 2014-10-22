@@ -6,8 +6,8 @@
  Generates color-ramp styles from SVG files.  It also compatible with CPT-CITY styles.
  SVG2ColoR improves your color-ramp library, by the way your maps look better.
                               -------------------
-        begin                : 2014-06-17
-		version				 : 0.8
+        begin                : 2014-10-17
+		version				 : 0.9
         copyright            : (C) 2014 by Mehmet Selim BILGIN
         email                : mselimbilgin@yahoo.com
 		web					 : http://cbsuygulama.wordpress.com/svg2color

@@ -7,6 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="744.09448819"
@@ -17,19 +18,56 @@
    sodipodi:docname="error.svg">
   <defs
      id="defs4">
-	 
-	<linearGradient gradientUnits="objectBoundingBox" id="reverse" spreadMethod="pad" x1="0%" x2="100%" y1="0%" y2="0%">
-            <stop offset="0.00%" stop-color="rgb(255,255,255)" stop-opacity="1.0000"/>
-			<stop offset="100.00%" stop-color="rgb(0,128,255)" stop-opacity="1.0000"/>
-	</linearGradient>
-	
-	<linearGradient gradientUnits="objectBoundingBox" id="normal" spreadMethod="pad" x1="0%" x2="100%" y1="0%" y2="0%">
-            <stop offset="0.00%" stop-color="rgb(0,128,255)" stop-opacity="1.0000"/>
-			<stop offset="100.00%" stop-color="rgb(255,255,255)" stop-opacity="1.0000"/>
-	</linearGradient>
-		
-		
-    
+    <linearGradient
+       gradientUnits="objectBoundingBox"
+       id="reverse"
+       spreadMethod="pad"
+       x1="0%"
+       x2="100%"
+       y1="0%"
+       y2="0%">
+      <stop
+         offset="0.00%"
+         stop-color="rgb(255,255,255)"
+         stop-opacity="1.0000"
+         id="stop3011" />
+      <stop
+         offset="100.00%"
+         stop-color="rgb(0,128,255)"
+         stop-opacity="1.0000"
+         id="stop3013" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       id="normal"
+       spreadMethod="pad"
+       x1="6.362781"
+       x2="143.83792"
+       y1="76.457142"
+       y2="76.457142"
+       gradientTransform="scale(3.1680874,0.31564786)">
+      <stop
+         offset="0.00%"
+         stop-color="rgb(0,128,255)"
+         stop-opacity="1.0000"
+         id="stop3016" />
+      <stop
+         offset="100.00%"
+         stop-color="rgb(255,255,255)"
+         stop-opacity="1.0000"
+         id="stop3018" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#normal"
+       id="linearGradient3108"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(3.1680874,0.31564786)"
+       spreadMethod="pad"
+       x1="6.362781"
+       y1="76.457142"
+       x2="143.83792"
+       y2="76.457142" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -40,7 +78,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1"
      inkscape:cx="367.46841"
-     inkscape:cy="963.12181"
+     inkscape:cy="1043.1218"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -75,26 +113,18 @@
        y="0.055938203" />
     <text
        xml:space="preserve"
-       style="font-size:65.53626251px;font-style:normal;font-weight:normal;line-height:116.99999571%;letter-spacing:0px;word-spacing:0px;fill:url(#normal);fill-opacity:1;stroke:#000000;stroke-width:0.69999993;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;font-family:Sans"
-       x="18.510262"
-       y="54.652832"
+       style="font-size:53.58843994px;font-style:normal;font-weight:normal;line-height:116.99999571%;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient3108);fill-opacity:1;stroke:#000000;stroke-width:0.69999993;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;font-family:Sans"
+       x="83.431015"
+       y="60.095936"
        id="text3770"
        sodipodi:linespacing="117%"
-       transform="scale(0.91932618,1.0877532)"><tspan
+       transform="scale(0.97588872,1.024707)"><tspan
          sodipodi:role="line"
          id="tspan3772"
-         x="18.510262"
-         y="54.652832"
-         style="font-size:43.25393295px;font-weight:bold;line-height:116.99999571%;fill:url(#normal);fill-opacity:1;stroke:#000000;stroke-width:0.69999993;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;-inkscape-font-specification:Sans Bold"><tspan
-           style="font-size:43.25393295px;font-weight:bold;fill:url(#normal);fill-opacity:1;stroke:#000000;stroke-width:0.69999993;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;-inkscape-font-specification:Sans Bold"
-           id="tspan3774">Load</tspan><tspan
-           style="font-size:43.25393295px;font-weight:bold;fill:url(#normal);fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;-inkscape-font-specification:Sans Bold"
-           id="tspan3788"> a</tspan><tspan
-           style="font-size:43.25393295px;font-weight:bold;fill:url(#normal);fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;-inkscape-font-specification:Sans Bold"
-           id="tspan3794"> proper</tspan><tspan
-           style="font-size:43.25393295px;font-weight:bold;fill:url(#normal);fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;-inkscape-font-specification:Sans Bold"
-           id="tspan3804"> SVG</tspan><tspan
-           style="font-size:43.25393295px;font-weight:bold;fill:url(#normal);fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;-inkscape-font-specification:Sans Bold"
-           id="tspan3814"> file</tspan></tspan></text>
+         x="83.431015"
+         y="60.095936"
+         style="font-size:35.36837006px;font-weight:bold;line-height:116.99999571%;fill:url(#linearGradient3108);fill-opacity:1;stroke:#000000;stroke-width:0.69999993;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;-inkscape-font-specification:Sans Bold">Load<tspan
+   style="font-size:35.36837006px;font-weight:bold;fill:url(#linearGradient3108);fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;-inkscape-font-specification:Sans Bold"
+   id="tspan3788"> a proper SVG</tspan></tspan></text>
   </g>
 </svg>
