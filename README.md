@@ -1,8 +1,8 @@
-SVG2ColoR v0.9
+SVG2ColoR v1.0
 ==========
 
 
-(C) 2014 by Mehmet Selim BILGIN
+(C) 2014-2018 by Mehmet Selim BILGIN
 
 mselimbilgin [at] yahoo.com
 
@@ -11,7 +11,7 @@ http://cbsuygulama.wordpress.com
 
 
 ###Description
-SVG2ColoR is a QGIS 2 plugin for transforming SVG Linear Gradient styles to QGIS style files. These styles can be applied to vector and raster layers. It is also compatible with CPT-CITY styles. SVG2ColoR improves your color-ramp library, by the way your maps look better.
+SVG2ColoR is a QGIS 3 plugin for transforming SVG Linear Gradient styles to QGIS style files. These styles can be applied to vector and raster layers. It is also compatible with CPT-CITY styles. SVG2ColoR improves your color-ramp library, by the way your maps look better.
 
 ###Features
 
@@ -40,5 +40,5 @@ SVG2ColoR is a QGIS 2 plugin for transforming SVG Linear Gradient styles to QGIS
 ###Installation
 
 1. Download the project and unzip it.
-2. Change the plugin folder name to SVG2ColoR. 
-3. Copy this folder to .qgis2\python\plugins\  
+2. Change the plugin folder name to svg2color. 
+3. Copy this folder to QGIS plugins folder (eg. /home/user/.local/share/QGIS/QGIS3/profiles/default/python/plugins/)
